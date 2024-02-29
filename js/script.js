@@ -1,11 +1,17 @@
-const contSqrJs = document.querySelector(".container-sqr")
+const contSqrJs = document.querySelector(".container-sqr");
+const btnJs = document.getElementById("btn");
 
 
-for (let i = 1; i <= 100; i++) {
-  const sqrReu = innSqr();
+btnJs.addEventListener("click", function(){
+
+  for (let i = 1; i <= 100; i++) {
+  const sqrReu = innSqr(i);
   contSqrJs.append(sqrReu);
+
   
 }
+})
+
 
 
 
@@ -19,9 +25,10 @@ for (let i = 1; i <= 100; i++) {
 
 /*********************FUNCTION********************/ 
 
-function innSqr() {
+function innSqr(inum) {
   const funcSqr = document.createElement("div");
   funcSqr.className = "sqr";
+  funcSqr.innerHTML = (inum)
   
   return funcSqr;
 }
