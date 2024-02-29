@@ -1,44 +1,45 @@
 const contSqrJs = document.querySelector(".container-sqr");
-const btnJsE = document.getElementById("btn-e");
-const btnJsM = document.getElementById("btn-m");
-const btnJsH = document.getElementById("btn-h");
+const btnStart = document.getElementById("start")
+const btnReset = document.getElementById("reset")
+const difficultJs = document.getElementById("difficult");
 
+btnReset.addEventListener("click", function(){
+  reset();
+})
 
-btnJsE.addEventListener("click", function(){
+btnStart.addEventListener("click", function(){
 
   reset();
+  if (difficultJs.value == "easy") {
 
-  for (let i = 1; i <= 49; i++) {
-  const sqrReu = innSqr(i);
-  contSqrJs.append(sqrReu);
-  contSqrJs.className = "container-sqr-e";
+    for (let i = 1; i <= 49; i++) {
 
-}
+      const sqrReu = innSqr(i);
+      contSqrJs.append(sqrReu);
+      contSqrJs.className = "container-sqr-e";
+
+    }
+  }else if (difficultJs.value == "medium") {
+    for (let i = 1; i <= 81; i++) {
+
+      const sqrReu = innSqr(i);
+      contSqrJs.append(sqrReu);
+      contSqrJs.className = "container-sqr-m";
+
+    }
+  }else{
+
+    for (let i = 1; i <= 100; i++) {
+
+      const sqrReu = innSqr(i);
+      contSqrJs.append(sqrReu);
+      contSqrJs.className = "container-sqr-h";
+
+    }
+  }
+
 })
-btnJsM.addEventListener("click", function(){
 
-  reset();
-
-  for (let i = 1; i <= 81; i++) {
-  const sqrReu = innSqr(i);
-  contSqrJs.append(sqrReu);
-  contSqrJs.className = "container-sqr-m";
-
-
-}
-})
-btnJsH.addEventListener("click", function(){
-
-  reset();
-
-  for (let i = 1; i <= 100; i++) {
-  const sqrReu = innSqr(i);
-  contSqrJs.append(sqrReu);
-  contSqrJs.className = "container-sqr-h";
-
-
-}
-})
 
 
 /*********************FUNCTION********************/ 
