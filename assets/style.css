@@ -2,13 +2,18 @@ body{
   background-image: url(../assets/img/color-explosion-color-splash-beautiful-colorful-particle-2560x1440-8422.jpg);
   background-size: cover;
 }
+.background-greed{
+  background-color: royalblue;
+}
 .container-sqr-h{
+  background-color: rgba(49, 95, 234, 0.591);
   width: 500px;
   aspect-ratio: 1;
   display: flex;
   flex-wrap: wrap;
 }
 .container-sqr-m{
+  background-color: rgba(65, 105, 225, 0.638);
   width: 450px;
   aspect-ratio: 1;
   display: flex;
@@ -16,6 +21,7 @@ body{
 
 }
 .container-sqr-e{
+  background-color: rgba(96, 126, 216, 0.57);
   width: 350px;
   aspect-ratio: 1;
   display: flex;
@@ -25,7 +31,7 @@ body{
 .sqr{
   width: 50px;
   height: 50px;
-  border: 2px solid rgb(141, 0, 0);
+  border: 4px outset rgb(141, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +40,7 @@ body{
 .clicked{
   font-weight: bold;
   font-size: 1.5rem;
-  border: 2px solid rgb(0, 97, 71);
+  border: 5px inset rgb(0, 97, 71);
   background-color: #0bcdb2;
 }
 .container-btn{
@@ -42,11 +48,13 @@ body{
   margin: 20px 0px;
 }
 .container-btn button{
+  color: white;
+  border: #0bcdb2 4px outset;
   background-color: #0064c8;
   margin: 0px 20px;
 }
 .container-btn select{
-  border: none;
+  border: 3px outset #0bcdb2;
   background-color: #0064c8;
   color: white;
 }
