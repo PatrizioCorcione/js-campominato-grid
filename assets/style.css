@@ -1,7 +1,6 @@
-main{
-  height: 100vh;
-
-  background-color: greenyellow;
+body{
+  background-image: url(../assets/img/color-explosion-color-splash-beautiful-colorful-particle-2560x1440-8422.jpg);
+  background-size: cover;
 }
 .container-sqr-h{
   width: 500px;
@@ -26,11 +25,28 @@ main{
 .sqr{
   width: 50px;
   height: 50px;
-  border: 2px solid black;
+  border: 2px solid rgb(141, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
+  color: blue;
 }
 .clicked{
-  background-color: aqua;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 2px solid rgb(0, 97, 71);
+  background-color: #0bcdb2;
+}
+.container-btn{
+  text-align: center;
+  margin: 20px 0px;
+}
+.container-btn button{
+  background-color: #0064c8;
+  margin: 0px 20px;
+}
+.container-btn select{
+  border: none;
+  background-color: #0064c8;
+  color: white;
 }
