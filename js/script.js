@@ -1,12 +1,41 @@
 const contSqrJs = document.querySelector(".container-sqr");
-const btnJs = document.getElementById("btn");
+const btnJsE = document.getElementById("btn-e");
+const btnJsM = document.getElementById("btn-m");
+const btnJsH = document.getElementById("btn-h");
 
 
-btnJs.addEventListener("click", function(){
+btnJsE.addEventListener("click", function(){
+
+  reset();
+
+  for (let i = 1; i <= 49; i++) {
+  const sqrReu = innSqr(i);
+  contSqrJs.append(sqrReu);
+  contSqrJs.className = "container-sqr-e";
+
+}
+})
+btnJsM.addEventListener("click", function(){
+
+  reset();
+
+  for (let i = 1; i <= 81; i++) {
+  const sqrReu = innSqr(i);
+  contSqrJs.append(sqrReu);
+  contSqrJs.className = "container-sqr-m";
+
+
+}
+})
+btnJsH.addEventListener("click", function(){
+
+  reset();
 
   for (let i = 1; i <= 100; i++) {
   const sqrReu = innSqr(i);
   contSqrJs.append(sqrReu);
+  contSqrJs.className = "container-sqr-h";
+
 
 }
 })
@@ -30,4 +59,9 @@ function innSqr(inum) {
   })
   
   return funcSqr;
+}
+
+function reset() {
+  contSqrJs.innerHTML = "";
+  
 }

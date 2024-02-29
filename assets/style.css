@@ -3,8 +3,25 @@ main{
 
   background-color: greenyellow;
 }
-.container-sqr{
+.container-sqr-h{
   width: 500px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-sqr-m{
+  width: 450px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.container-sqr-e{
+  width: 350px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 .sqr{
   width: 50px;
