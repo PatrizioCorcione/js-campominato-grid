@@ -8,27 +8,26 @@ btnJs.addEventListener("click", function(){
   const sqrReu = innSqr(i);
   contSqrJs.append(sqrReu);
 
-  
 }
 })
-
-
-
-
-
-
-
-
-
-
 
 
 /*********************FUNCTION********************/ 
 
 function innSqr(inum) {
+
   const funcSqr = document.createElement("div");
   funcSqr.className = "sqr";
-  funcSqr.innerHTML = (inum)
+
+  funcSqr.addEventListener("click", function(){
+
+    this.innerHTML = !(this.classList.contains("clicked"))
+    ? this.innerHTML = inum
+    : this.innerHTML = "";
+    this.classList.toggle("clicked");
+    console.log(inum);
+
+  })
   
   return funcSqr;
 }
